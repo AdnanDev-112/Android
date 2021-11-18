@@ -15,4 +15,6 @@
     <string name="male">Male</string>
     <string name="choose_gender">Choose Gender</string>
     <string name="register">Register</string>
+    <string name="user_registered_successfully">User Registered Successfully</string>
+    <string name="welcome_image">Welcome Image</string>
 </resources>

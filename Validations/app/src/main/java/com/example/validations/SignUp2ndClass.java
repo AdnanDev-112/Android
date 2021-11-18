@@ -22,10 +22,7 @@ public class SignUp2ndClass extends AppCompatActivity {
 //    Variables
 
     Button registerBtn;
-
-
     RadioGroup radioGroup;
-    RadioButton selectedAge;
     DatePicker datePicker;
 
 
