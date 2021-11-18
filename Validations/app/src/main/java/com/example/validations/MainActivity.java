@@ -40,10 +40,23 @@ public class MainActivity extends AppCompatActivity {
         titleText = findViewById(R.id.signup_title_text);
         slideText = findViewById(R.id.signup_slide_text);
     }
-
+     String fullNameS = fullName.getEditText().toString();
+     String userNameS = userName.getEditText().toString();
+     String emailS = email.getEditText().toString();
+     String passwordS = password.getEditText().toString();
 
     public void callNextSignupScreen(View view) {
+
+        if (!validateFullName() | !validateUserName()| !validateEmail() | !validatePassword())
+        {
+            return;
+        }
+
         Intent intent = new Intent(getApplicationContext(), SignUp2ndClass.class);
+        intent.putExtra("fullName",fullNameS);
+        intent.putExtra("userName",userNameS);
+        intent.putExtra("email",emailS);
+        intent.putExtra("password",passwordS);
         //Add Shared Animation
         Pair[] pairs = new Pair[3];
         pairs[0] = new Pair<View,String>(next, "transition_next_btn");
@@ -82,8 +95,9 @@ public class MainActivity extends AppCompatActivity {
         }else if(val.length()>12){
             userName.setError("Username cannot be more than 12 Characters");
             return false;
-        }else if(val.matches(checkspaces)){
+        }else if(!val.matches(checkspaces)){
             userName.setError("No White Spaces Allowed");
+            return false;
         }
         else{
             userName.setError(null);
@@ -91,5 +105,43 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     }
+
+    private boolean validateEmail(){
+        String val = email.getEditText().getText().toString().trim();
+        String checkEmail = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        if(val.isEmpty()){
+            email.setError("Field cannot be Empty");
+            return false;
+        }
+        else if(!val.matches(checkEmail)){
+            email.setError("Invalid Email!");
+            return false;
+        }
+        else{
+            email.setError(null);
+            email.setErrorEnabled(false);
+            return true;
+        }
+    }
+
+
+
+private boolean validatePassword(){
+    String val = password.getEditText().getText().toString().trim();
+    String checkPassword = "^"+"(?=.*[a-zA-Z])"+"(?=.*[@#$%^&+=])"+"(?=\\s+$)";
+    if(val.isEmpty()){
+        password.setError("Password should contain 4 characters");
+        return false;
+    }
+    else if(!val.matches(checkPassword)){
+       password.setError("Invalid Email!");
+        return false;
+    }
+    else{
+        password.setError(null);
+        password.setErrorEnabled(false);
+        return true;
+    }
+}
 
 }
