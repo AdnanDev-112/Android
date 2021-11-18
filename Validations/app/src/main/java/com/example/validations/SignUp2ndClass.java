@@ -37,7 +37,7 @@ public class SignUp2ndClass extends AppCompatActivity {
         radioGroup = findViewById(R.id.radio_group);
         datePicker = findViewById(R.id.age_picker);
        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        getWindow().setNavigationBarColor(getResources().getColor(R.color.black));
+        getWindow().setNavigationBarColor(getResources().getColor(R.color.navBarColor));
     }
 
 

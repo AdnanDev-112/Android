@@ -13,6 +13,6 @@ public class Register_page extends AppCompatActivity {
         setContentView(R.layout.activity_register_page);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        getWindow().setNavigationBarColor(getResources().getColor(R.color.black));
+        getWindow().setNavigationBarColor(getResources().getColor(R.color.navBarColor));
     }
 }
