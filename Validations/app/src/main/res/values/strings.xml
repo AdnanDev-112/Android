@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Validations</string>
+    <string name="create_account">Create Account</string>
+    <string name="enter_full_name">Full Name</string>
+    <string name="enter_email">Email</string>
+    <string name="enter_password">Password</string>
+    <string name="next_btn">Next</string>
+    <string name="login">Login</string>
+    <string name="enter_username">Username</string>
+    <string name="_1_2">1/2</string>
+    <string name="_2_2">2/2</string>
+    <string name="select_your_age">Select Your Age</string>
+    <string name="other">Other</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="choose_gender">Choose Gender</string>
+    <string name="register">Register</string>
+</resources>
