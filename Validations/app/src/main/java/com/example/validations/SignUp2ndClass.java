@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
@@ -37,6 +39,8 @@ public class SignUp2ndClass extends AppCompatActivity {
         registerBtn = findViewById(R.id.register_button);
         radioGroup = findViewById(R.id.radio_group);
         datePicker = findViewById(R.id.age_picker);
+       getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        getWindow().setNavigationBarColor(getResources().getColor(R.color.black));
     }
 
 

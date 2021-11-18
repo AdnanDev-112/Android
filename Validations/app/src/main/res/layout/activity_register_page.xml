@@ -9,12 +9,12 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="414dp"
-        android:layout_height="153dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/black"
         android:text="User Registered Successfully"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
