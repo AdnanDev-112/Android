@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Validations">
         <activity
+            android:name=".Register_page"
+            android:exported="false" />
+        <activity
             android:name=".SignUp2ndClass"
             android:exported="false" />
         <activity
