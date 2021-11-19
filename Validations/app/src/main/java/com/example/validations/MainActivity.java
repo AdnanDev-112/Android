@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
         if(val.isEmpty()){
             password.setError("Field cannot be Empty");
             return false;
-//        }else if(!val.matches(checkPassword)){
         }else if(!matcher.matches()){
             password.setError("Password should contain 1 digit");
             return false;
