@@ -59,15 +59,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), SignUp2ndClass.class);
 
 
-
-        //Add Shared Animation
-        Pair[] pairs = new Pair[3];
-        pairs[0] = new Pair<View,String>(next, "transition_next_btn");
-        pairs[1] = new Pair<View,String>(titleText, "transition_title_text");
-        pairs[2] = new Pair<View,String>(slideText, "transition_slide_text");
-
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
-        startActivity(intent, options.toBundle());
+//
+//        //Add Shared Animation
+//        Pair[] pairs = new Pair[3];
+//        pairs[0] = new Pair<View,String>(next, "transition_next_btn");
+//        pairs[1] = new Pair<View,String>(titleText, "transition_title_text");
+//        pairs[2] = new Pair<View,String>(slideText, "transition_slide_text");
+//
+//        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
+        startActivity(intent);
 
 
 
